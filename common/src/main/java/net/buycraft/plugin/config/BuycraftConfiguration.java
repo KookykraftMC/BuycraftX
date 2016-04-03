@@ -58,6 +58,14 @@ public class BuycraftConfiguration {
         return getBoolean("verbose", true);
     }
 
+    public void setAnalytics(boolean analytics) {
+        properties.setProperty("analytics", Boolean.toString(analytics));
+    }
+
+    public boolean doAnalytics() {
+        return getBoolean("analytics", false);
+    }
+
     private boolean getBoolean(String key, boolean val) {
         if (!properties.containsKey(key))
             return val;
@@ -84,5 +92,6 @@ public class BuycraftConfiguration {
         defaultSet("disable-buy-command", "false");
         defaultSet("buy-command-name", "buy");
         defaultSet("verbose", "true");
+        defaultSet("analytics", "false");
     }
 }

@@ -35,7 +35,11 @@ public class AnalyticsUtil {
         keenData.put("plugin", pluginData);
 
         try {
-            AnalyticsSend.sendAnalytics(plugin.getHttpClient(), plugin.getConfiguration().getServerKey(), keenData);
+            //if (!plugin.getConfiguration().)
+            if (plugin.getConfiguration().doAnalytics()) {
+                AnalyticsSend.sendAnalytics(plugin.getHttpClient(), plugin.getConfiguration().getServerKey(), keenData);
+            }
+            plugin.getLogger().log(Level.INFO, "Analytics is disabled.");
         } catch (IOException e) {
             plugin.getLogger().log(Level.WARNING, "Can't send analytics", e);
         }
