@@ -31,15 +31,7 @@ public class SendCheckoutLink implements Runnable {
         }
 
         player.sendMessage(ChatColor.STRIKETHROUGH + "                                            ");
-        new FancyMessage("To buy your package, click ")
-                .color(ChatColor.GRAY)
-                .then("here")
-                .color(ChatColor.GREEN)
-                .style(ChatColor.UNDERLINE)
-                .link(response.getUrl())
-                .then(".")
-                .color(ChatColor.GRAY)
-                .send(player);
+        player.sendMessage(response.getUrl());
         player.sendMessage(ChatColor.STRIKETHROUGH + "                                            ");
     }
 }
