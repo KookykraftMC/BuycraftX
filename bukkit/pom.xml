@@ -34,11 +34,14 @@
                 <configuration>
                     <artifactSet>
                         <excludes>
-                            <exclude>com.google.code.gson</exclude>
                             <exclude>com.google.guava</exclude>
                         </excludes>
                     </artifactSet>
                     <relocations>
+			<relocation>
+			    <pattern>com.google.code.gson</pattern>
+			    <shadedPattern>net.buycraft.plugin.bukkit.internal.gson</shadedPattern>
+			</relocation>
                         <relocation>
                             <pattern>com.bugsnag</pattern>
                             <shadedPattern>net.buycraft.plugin.bukkit.internal.bugsnag</shadedPattern>
