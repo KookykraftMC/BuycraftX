@@ -5,10 +5,9 @@ BuycraftX is an entirely new plugin for use with the [Buycraft.net service](http
 ## The major differences
 
 * A total rewrite of the plugin based on modern coding standards. The new plugin is geared towards reliability and performance.
-* Supports multiple platforms:
-  * Spigot 1.8 or above
-  * BungeeCord (recent versions)
-  * Sponge 3.x
+
+* This fork will only work on Spigot/PaperSpigot 1.7.10
+
 * Custom item IDs are not supported, as it is not portable to other platforms and is deprecated.
 
 ## Standalone executor
